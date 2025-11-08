@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tarefa.css";
 
-const Tarefa = ({ id, nome, descricao, status }) => {
+const Tarefa = ({ id, nome, descricao, status, removerTarefa }) => {
   return (
     <div className="Tarefa">
       <div className="texto">
@@ -12,7 +12,7 @@ const Tarefa = ({ id, nome, descricao, status }) => {
 
       <div className="botoes">
         <button className="concluir">Concluir</button>
-        <button className="deletar">Deletar</button>
+        <button className="deletar" onClick={removerTarefa}>Deletar</button>
       </div>
     </div>
   );
